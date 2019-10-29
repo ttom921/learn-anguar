@@ -1,0 +1,11 @@
+<h3>
+  歡𨒖來到{{title}}
+</h3>
+
+<h3>1+1={{1+1}}</h3>
+
+<h3>可以調用方法{{getVal()}}</h3>
+<hr />
+<input #heroInput>
+<p>{{heroInput.value}}</p>
+<button (click)="sayHello(heroInput.value)">局部變量</button>
