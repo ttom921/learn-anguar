@@ -6,6 +6,16 @@
 
 <h3>可以調用方法{{getVal()}}</h3>
 <hr />
+<p>局部變量</p>
 <input #heroInput>
 <p>{{heroInput.value}}</p>
 <button (click)="sayHello(heroInput.value)">局部變量</button>
+<hr />
+<p>屬性綁定</p>
+<img [src]="imgSrc" />
+<hr />
+<p>事件綁定</p>
+<button (click)="btnClick($event)">測試事件</button>
+<hr />
+<p>雙定綁定</p>
+<div [style.font-size.px]="fontSizePx">Resizable Text</div>

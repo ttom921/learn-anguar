@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestInterpolationComponent implements OnInit {
   title = "假的星際爭霸2";
+  imgSrc: string = "./assets/imgs/1.jpg";
+  fontSizePx: number = 48;
   constructor() { }
 
   ngOnInit() {
@@ -16,5 +18,8 @@ export class TestInterpolationComponent implements OnInit {
   }
   sayHello(name: string) {
     alert(name);
+  }
+  btnClick(event): void {
+    alert("測試事件綁定");
   }
 }
