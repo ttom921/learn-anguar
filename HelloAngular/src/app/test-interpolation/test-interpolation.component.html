@@ -19,3 +19,18 @@
 <hr />
 <p>雙定綁定</p>
 <div [style.font-size.px]="fontSizePx">Resizable Text</div>
+<hr />
+<p>結構型指令</p>
+<p>*ngIf</p>
+<p *ngIf="isShow" style="background-color:#ff3300;">是顯示還是不顯示？</p>
+<button (click)="toggleShow()">控級顯示隱藏</button>
+<p>*ngFor</p>
+<li *ngFor="let race of races;let i=index;">
+  {{i+1}}-{{race.name}}
+</li>
+<p>*ngSwitch</p>
+<div [ngSwitch]="mapStatus">
+  <p *ngSwitchCase="0">下載中…</p>
+  <p *ngSwitchCase="1">正在讀取…</p>
+  <p *ngSwitchDefault>系統繁忙…</p>
+</div>

@@ -9,6 +9,7 @@ export class TestInterpolationComponent implements OnInit {
   title = "假的星際爭霸2";
   imgSrc: string = "./assets/imgs/1.jpg";
   fontSizePx: number = 48;
+  isShow = true;
   constructor() { }
 
   ngOnInit() {
@@ -22,4 +23,13 @@ export class TestInterpolationComponent implements OnInit {
   btnClick(event): void {
     alert("測試事件綁定");
   }
+  toggleShow() {
+    this.isShow = !this.isShow;
+  }
+  races = [
+    { name: "人族" },
+    { name: "蟲族" },
+    { name: "神族" }
+  ];
+  mapStatus: number = 1;
 }
