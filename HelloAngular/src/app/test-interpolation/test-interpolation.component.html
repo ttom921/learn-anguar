@@ -34,3 +34,17 @@
   <p *ngSwitchCase="1">正在讀取…</p>
   <p *ngSwitchDefault>系統繁忙…</p>
 </div>
+<hr />
+<p>屬性型指令</p>
+<p>NgClass</p>
+<div [ngClass]="currentClasses">同時批量設置多個樣式</div>
+<button (click)="setCurrentClasses()">設置</button>
+<p>NgStyle</p>
+<div [ngStyle]="currentStyles">
+  用NgStyle批量修改內聯樣式！
+</div>
+<button (click)="setCurrentStyles()">設置NgStyle</button>
+<p>NgModel</p>
+<p>ngModel 只能用在表單類的元素上面</p>
+<input [(ngModel)]="currentRace.name">
+<p>{{currentRace.name}}</p>

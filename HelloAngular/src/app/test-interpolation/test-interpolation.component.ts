@@ -32,4 +32,26 @@ export class TestInterpolationComponent implements OnInit {
     { name: "神族" }
   ];
   mapStatus: number = 1;
+
+  currentClasses: {};
+  canSave: boolean = true;
+  isUnchanged: boolean = true;
+  isSpecial: boolean = true;
+  setCurrentClasses() {
+    this.currentClasses = {
+      'saveable': this.canSave,
+      'modified': this.isUnchanged,
+      'special': this.isSpecial
+    };
+  }
+
+  currentStyles: {};
+  setCurrentStyles() {
+    this.currentStyles = {
+      'font-style': this.canSave ? 'italic' : 'normal',
+      'font-weight': this.isUnchanged ? 'bold' : 'normal',
+      'font-size': this.isSpecial ? '36px' : '12px'
+    }
+  };
+  currentRace: any = { name: "隨機種族" };
 }

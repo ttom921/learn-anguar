@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule }   from '@angular/forms';
 import { TestInterpolationComponent } from './test-interpolation/test-interpolation.component';
 
 @NgModule({
@@ -12,6 +13,7 @@ import { TestInterpolationComponent } from './test-interpolation/test-interpolat
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],
