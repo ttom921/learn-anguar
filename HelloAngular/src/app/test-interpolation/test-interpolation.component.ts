@@ -54,4 +54,7 @@ export class TestInterpolationComponent implements OnInit {
     }
   };
   currentRace: any = { name: "隨機種族" };
+
+
+
 }
