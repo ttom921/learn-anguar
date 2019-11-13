@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -6,8 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./child.component.scss']
 })
 export class ChildComponent implements OnInit {
-  private _panelTitle: string = "我是子組件";
 
+  @Output() follow = new EventEmitter<string>();
+
+  private _panelTitle: string = "我是子組件";
+  @Input()
   public get panelTitle(): string {
     return this._panelTitle;
   }
@@ -19,8 +22,13 @@ export class ChildComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
   childFn() {
     console.log("子組件的名字是->" + this.panelTitle)
   }
+  emitAnEvent(event) {
+    this.follow.emit("follow");//觸發follow事件的方式
+  }
+
 }

@@ -2,3 +2,9 @@
 
 <app-child #child></app-child>
 <button (click)="child.childFn()">調用子組件方法</button>
+<hr />
+<p>@Input的使用</p>
+<app-child panelTitle="這是一父元件給的標題"></app-child>
+<hr />
+<p>@Output的使用</p>
+<app-child (follow)="doSomething($event)"></app-child>

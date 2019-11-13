@@ -8,10 +8,11 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 export class ParentAndChildComponent implements OnInit {
 
   @ViewChild('child', { static: true }) child: ElementRef
-
   constructor() { }
 
   ngOnInit() {
   }
-
+  doSomething(ev: Event) {
+    console.log("父組件收到event->" + ev);
+  }
 }
