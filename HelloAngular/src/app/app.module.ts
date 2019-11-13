@@ -5,11 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule }   from '@angular/forms';
 import { TestInterpolationComponent } from './test-interpolation/test-interpolation.component';
+import { ParentAndChildComponent } from './parent-and-child/parent-and-child.component';
+import { ChildComponent } from './parent-and-child/child/child.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TestInterpolationComponent,
+    ParentAndChildComponent,
+    ChildComponent,
   ],
   imports: [
     BrowserModule,
