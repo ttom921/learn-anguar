@@ -18,6 +18,8 @@ import { LocalStorageComponent } from './local-storage/local-storage.component';
 import { LocalChild2Component } from './local-storage/local-child2/local-child2.component';
 import { LocalChild1Component } from './local-storage/local-child1/local-child1.component';
 import { TestFlyInComponent } from './test-fly-in/test-fly-in.component';
+import { DynamicCompComponent } from './dynamic-comp/dynamic-comp.component';
+import { Child11Component } from './dynamic-comp/child11/child11.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { TestFlyInComponent } from './test-fly-in/test-fly-in.component';
     LocalChild1Component,
     LocalChild2Component,
     TestFlyInComponent,
+    DynamicCompComponent,
+    Child11Component,
   ],
   imports: [
     BrowserModule,
@@ -41,6 +45,7 @@ import { TestFlyInComponent } from './test-fly-in/test-fly-in.component';
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [Child11Component]
 })
 export class AppModule { }
