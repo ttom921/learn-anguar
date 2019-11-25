@@ -20,6 +20,9 @@ import { LocalChild1Component } from './local-storage/local-child1/local-child1.
 import { TestFlyInComponent } from './test-fly-in/test-fly-in.component';
 import { DynamicCompComponent } from './dynamic-comp/dynamic-comp.component';
 import { Child11Component } from './dynamic-comp/child11/child11.component';
+import { ShadowDomModeComponent } from './lession2-8/shadow-dom-mode/shadow-dom-mode.component';
+import { EmulateModeComponent } from './lession2-8/emulate-mode/emulate-mode.component';
+import { NoneModeComponent } from './lession2-8/none-mode/none-mode.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +40,9 @@ import { Child11Component } from './dynamic-comp/child11/child11.component';
     TestFlyInComponent,
     DynamicCompComponent,
     Child11Component,
+    ShadowDomModeComponent,
+    EmulateModeComponent,
+    NoneModeComponent,
   ],
   imports: [
     BrowserModule,
