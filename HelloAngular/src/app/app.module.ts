@@ -23,6 +23,11 @@ import { Child11Component } from './dynamic-comp/child11/child11.component';
 import { ShadowDomModeComponent } from './lession2-8/shadow-dom-mode/shadow-dom-mode.component';
 import { EmulateModeComponent } from './lession2-8/emulate-mode/emulate-mode.component';
 import { NoneModeComponent } from './lession2-8/none-mode/none-mode.component';
+import { TestNgContentComponent } from './lession2-9/test-ng-content/test-ng-content.component';
+import { ChildOneComponent } from './lession2-9/child-one/child-one.component';
+import { TestNgContent2Component } from './lession2-9/ng-content/test-ng-content2/test-ng-content2.component';
+import { ChildTwoComponent } from './lession2-9/ng-content/child-two/child-two.component';
+import { ChildThreeComponent } from './lession2-9/ng-content/child-three/child-three.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +48,11 @@ import { NoneModeComponent } from './lession2-8/none-mode/none-mode.component';
     ShadowDomModeComponent,
     EmulateModeComponent,
     NoneModeComponent,
+    TestNgContentComponent,
+    ChildOneComponent,
+    TestNgContent2Component,
+    ChildTwoComponent,
+    ChildThreeComponent,
   ],
   imports: [
     BrowserModule,
