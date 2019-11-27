@@ -28,6 +28,9 @@ import { ChildOneComponent } from './lession2-9/child-one/child-one.component';
 import { TestNgContent2Component } from './lession2-9/ng-content/test-ng-content2/test-ng-content2.component';
 import { ChildTwoComponent } from './lession2-9/ng-content/child-two/child-two.component';
 import { ChildThreeComponent } from './lession2-9/ng-content/child-three/child-three.component';
+import { TestContentChildComponent } from './lession2-10/test-content-child/test-content-child.component';
+import { ChildOne2t10Component } from './lession2-10/child-one2t10/child-one2t10.component';
+import { ChildTwo2t10Component } from './lession2-10/child-two2t10/child-two2t10.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +56,9 @@ import { ChildThreeComponent } from './lession2-9/ng-content/child-three/child-t
     TestNgContent2Component,
     ChildTwoComponent,
     ChildThreeComponent,
+    TestContentChildComponent,
+    ChildOne2t10Component,
+    ChildTwo2t10Component,
   ],
   imports: [
     BrowserModule,
