@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ContentChild } from '@angular/core';
 
 @Component({
   selector: 'app-child-two2t10',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./child-two2t10.component.scss']
 })
 export class ChildTwo2t10Component implements OnInit {
+
 
   constructor() { }
 

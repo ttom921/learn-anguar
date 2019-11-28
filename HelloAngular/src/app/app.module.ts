@@ -31,6 +31,8 @@ import { ChildThreeComponent } from './lession2-9/ng-content/child-three/child-t
 import { TestContentChildComponent } from './lession2-10/test-content-child/test-content-child.component';
 import { ChildOne2t10Component } from './lession2-10/child-one2t10/child-one2t10.component';
 import { ChildTwo2t10Component } from './lession2-10/child-two2t10/child-two2t10.component';
+import { TestViewChildComponent } from './lession2-11/test-view-child/test-view-child.component';
+import { ChilOne2a11Component } from './lession2-11/chil-one2a11/chil-one2a11.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +61,8 @@ import { ChildTwo2t10Component } from './lession2-10/child-two2t10/child-two2t10
     TestContentChildComponent,
     ChildOne2t10Component,
     ChildTwo2t10Component,
+    TestViewChildComponent,
+    ChilOne2a11Component,
   ],
   imports: [
     BrowserModule,
