@@ -36,4 +36,14 @@
 <!-- <app-test-content-child></app-test-content-child> -->
 
 <!-- lession2-11:@ViewChild & ViewChildren -->
-<app-test-view-child></app-test-view-child>
+<!-- <app-test-view-child></app-test-view-child> -->
+
+
+<!-- lession3-2:自定義指令 -->
+<p MyHighLight highligtColor="#ff3300">內容高亮顯示</p>
+
+<div *ngFor="let item of [1,2,3]">
+  <app-card *appDelay="500 * item">
+    第{{item}}張卡片
+  </app-card>
+</div>

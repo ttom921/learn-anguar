@@ -11,7 +11,7 @@ export class ChildOne2t10Component implements OnInit, AfterContentInit {
   //注解的寫法
   //@ContentChild(ChildTwo2t10Component) childtwo: ChildTwo2t10Component;
   //這時候不是單個組，是一個列表QueryList
-  @ContentChildren(ChildTwo2t10Component) childrenTwo: QueryList;
+  @ContentChildren(ChildTwo2t10Component) childrenTwo: QueryList<ChildTwo2t10Component>;
   constructor() { }
 
   ngOnInit() {

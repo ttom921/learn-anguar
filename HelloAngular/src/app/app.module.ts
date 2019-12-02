@@ -33,6 +33,9 @@ import { ChildOne2t10Component } from './lession2-10/child-one2t10/child-one2t10
 import { ChildTwo2t10Component } from './lession2-10/child-two2t10/child-two2t10.component';
 import { TestViewChildComponent } from './lession2-11/test-view-child/test-view-child.component';
 import { ChilOne2a11Component } from './lession2-11/chil-one2a11/chil-one2a11.component';
+import { MyHighLightDirective } from './lession3-2/directives/my-high-light.directive';
+import { DelayDirective } from './lession3-2/directives/delay.directive';
+import { CardComponent } from './lession3-2/card/card.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +66,9 @@ import { ChilOne2a11Component } from './lession2-11/chil-one2a11/chil-one2a11.co
     ChildTwo2t10Component,
     TestViewChildComponent,
     ChilOne2a11Component,
+    MyHighLightDirective,
+    DelayDirective,
+    CardComponent,
   ],
   imports: [
     BrowserModule,
