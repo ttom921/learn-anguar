@@ -36,6 +36,7 @@ import { ChilOne2a11Component } from './lession2-11/chil-one2a11/chil-one2a11.co
 import { MyHighLightDirective } from './lession3-2/directives/my-high-light.directive';
 import { DelayDirective } from './lession3-2/directives/delay.directive';
 import { CardComponent } from './lession3-2/card/card.component';
+import { Test3a3Component } from './lession3-3/test3a3/test3a3.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +70,7 @@ import { CardComponent } from './lession3-2/card/card.component';
     MyHighLightDirective,
     DelayDirective,
     CardComponent,
+    Test3a3Component,
   ],
   imports: [
     BrowserModule,
