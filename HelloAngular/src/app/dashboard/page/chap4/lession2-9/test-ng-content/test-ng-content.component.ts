@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-test-ng-content',
   templateUrl: './test-ng-content.component.html',
-  styleUrls: ['./test-ng-content.component.scss']
+  styleUrls: ['./test-ng-content.component.scss'],
 })
 export class TestNgContentComponent implements OnInit {
 
