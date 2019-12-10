@@ -1,16 +1,28 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PathNotFoundComponent } from './error-pages/path-not-found/path-not-found.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-  { path: 'dashboard', redirectTo: 'dashboard', pathMatch: 'full' },
-  { path: '404', component: PathNotFoundComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+  },
+  {
+    path: 'jokes',
+    loadChildren: () => import('./jokes/jokes.module').then(m => m.JokesModule)
+  },
+  //通配符匹配必須寫在最後一個
+  {
+    path: '**',
+    loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, { enableTracing: true }),
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
