@@ -1,1 +1,18 @@
 <p>home works!</p>
+<!--嵌套導航-->
+<div>
+  <div>
+    <!--這里是二級導航菜單-->
+    <div>
+      <h3>這里是二級導航菜單</h3>
+      <ul>
+        <li> <a routerLink='pictures' routerLinkActive="router-link-active">只看圖片</a></li>
+        <li><a routerLink='text' routerLinkActive="router-link-active">只看文字</a></li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <!--主體內容是動態的-->
+    <router-outlet></router-outlet>
+  </div>
+</div>
