@@ -4,10 +4,10 @@
   <div>
     <ul>
       <li>
-        <a [routerLink]="['/home']" routerLinkActive="router-link-active">主頁</a>
+        <a [routerLink]="['/home','1']">主頁</a>
       </li>
       <li>
-        <a [routerLink]="['/jokes']" routerLinkActive="router-link-active">段子</a>
+        <a [routerLink]="['/jokes',{id:111,name:'demo'}]">段子</a>
       </li>
     </ul>
   </div>
