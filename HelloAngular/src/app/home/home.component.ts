@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, NavigationStart, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,18 +7,7 @@ import { Router, NavigationStart, ActivatedRoute } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(
-    public router: Router,
-    public activeRoute: ActivatedRoute
-  ) {
-
-  }
+  constructor() { }
   ngOnInit() {
-    this.activeRoute.params.subscribe((value) => {
-      console.log(value);
-    });
-  }
-  manualNav() {
-    this.router.navigate(["/jokes"], { queryParams: { page: 1, name: 222 } });
   }
 }
