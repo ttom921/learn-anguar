@@ -18,6 +18,8 @@ export class HomeComponent implements OnInit {
     this.activeRoute.params.subscribe((value) => {
       console.log(value);
     });
-
+  }
+  manualNav() {
+    this.router.navigate(["/jokes"], { queryParams: { page: 1, name: 222 } });
   }
 }

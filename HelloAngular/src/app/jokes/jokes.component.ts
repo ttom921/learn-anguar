@@ -17,6 +17,9 @@ export class JokesComponent implements OnInit {
     this.activeRoute.params.subscribe((value) => {
       console.log(value);
     });
+    this.activeRoute.queryParams.subscribe((queryParam) => {
+      console.log(queryParam);
+    });
   }
 
 }
