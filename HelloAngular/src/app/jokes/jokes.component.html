@@ -1,1 +1,13 @@
-<p>jokes works!</p>
+<h3>這里是段子列表</h3>
+<form>
+  <div>
+    <div>
+      <input type="text" placeholder="寫一個段子吧" [value]="jokeContent" (change)="writeJoke($event.target.value)" name="jokeContent">
+    </div>
+  </div>
+  <div>
+    <div>
+      <button (click)="saveContent()">提交</button>
+    </div>
+  </div>
+</form>
