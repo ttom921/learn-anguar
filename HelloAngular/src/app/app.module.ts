@@ -3,19 +3,22 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MyPreloadingStrategy } from './common/my-preloading-strategy';
-import { AuthService } from './auth/auth.service';
-import { AuthGuard } from './auth/auth.guard';
+import { HomeComponent } from './home/home.component';
+import { LeftNavComponent } from './home/left-nav/left-nav.component';
+import { MainAreaComponent } from './home/main-area/main-area.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
+    LeftNavComponent,
+    MainAreaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
   ],
-  providers: [AuthService, AuthGuard],
+  providers: [],
   bootstrap: [AppComponent],
   entryComponents: []
 })

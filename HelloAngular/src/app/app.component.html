@@ -4,17 +4,9 @@
   <div>
     <ul>
       <li>
-        <a [routerLink]="['/home']">主頁</a>
+        <a [routerLink]="['home',{outlets:{'left-nav':['leftNav'],'main-area':['none']}}]">主頁</a>
       </li>
-      <li>
-        <a [routerLink]="['/jokes']">段子</a>
-      </li>
-      <li>
-        <a [routerLink]="['/picture']">圖片</a>
-      </li>
-      <li>
-        <a [routerLink]="['/text']">文字</a>
-      </li>
+
     </ul>
   </div>
 </div>
