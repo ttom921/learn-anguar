@@ -3,16 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { LeftNavComponent } from './home/left-nav/left-nav.component';
-import { MainAreaComponent } from './home/main-area/main-area.component';
+import { FormQuickStartComponent } from './form-quick-start/form-quick-start.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    LeftNavComponent,
-    MainAreaComponent
+    FormQuickStartComponent,
   ],
   imports: [
     BrowserModule,
