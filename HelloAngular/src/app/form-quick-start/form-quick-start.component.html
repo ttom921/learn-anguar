@@ -5,21 +5,29 @@
       <div>
         <label>用戶名：</label>
         <div>
-          <input type="email" placeholder="Email" (keyup)="userNameChange($event)">
+          <input type="email" placeholder="Email" name="userName" [(ngModel)]="regModel.userName">
         </div>
       </div>
       <div>
         <label>密碼：</label>
         <div>
-          <input #pwd type="password" placeholder="Password" (keyup)="0">
+          <input #pwd type="password" name="password" placeholder="Password" [(ngModel)]="regModel.password">
+        </div>
+      </div>
+      <div>
+        <div>
+          <label>
+            <input type="checkbox" name="rememberMe" [(ngModel)]="regModel.rememberMe">記住我
+          </label>
         </div>
       </div>
 
     </form>
 
     <div>
-      <p>用戶名：{{userName}}</p>
-      <p>密碼：{{pwd.value}}</p>
+      <p>用戶名：{{regModel.userName}}</p>
+      <p>密碼：{{regModel.password}}</p>
+      <p>記住我：{{regModel.rememberMe}}</p>
     </div>
 
   </div>
