@@ -20,6 +20,17 @@
 
         </div>
       </div>
+
+      <div>
+        <label>手機號</label>
+        <div>
+          <input placeholder="Mobile" #mobile="ngModel" name="mobile" [(ngModel)]="regModel.mobile" ChineseMobileValidator>
+          <div *ngIf="mobile.invalid && (mobile.dirty || mobile.touched)" style="background-color: red;">
+            請輸入合法的手機號
+          </div>
+        </div>
+      </div>
+
       <div>
         <label>密碼：</label>
         <div>
@@ -30,8 +41,17 @@
     </form>
 
     <div>
-      <p>用戶名：{{userName.value}}</p>
+      <p>用戶名：{{userName.value}}
+        {{userName.valid}}
+        {{userName.invalid}}
+        {{userName.pending}}
+        {{userName.pristine}}
+        {{userName.dirty}}
+        {{userName.untouched}}
+        {{userName.touched}}
+      </p>
       <p>密碼：{{pwd.value}}</p>
+      <p>手機號:{{mobile.value}}</p>
       <!-- <pre>{{registerForm.value |json }}</pre> -->
       <p>表單值 value:{{registerForm.value |json }}</p>
       <p>表單狀態 valid:{{registerForm.valid}}</p>
