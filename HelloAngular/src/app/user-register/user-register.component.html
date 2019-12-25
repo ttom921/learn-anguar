@@ -1,0 +1,40 @@
+<p>user-register works!</p>
+<form [formGroup]="formModel" (ngSubmit)="onSubmit($event)">
+
+
+  <div [ngClass]="{'has-error':formErrors.email}">
+    <label>電子郵件</label>
+    <div>
+      <input formControlName="email" type="email" placeholder="輸入電子郵件">
+      <div *ngIf="formErrors.email" style="background-color: red;">
+        {{formErrors.email}}
+      </div>
+    </div>
+  </div>
+
+  <div [ngClass]="{'has-error': formErrors.password}">
+    <label>密碼</label>
+    <div>
+      <input formControlName="password" validateEqual="confirmPassword" reverse=true type="password" placeholder="輸入密碼">
+      <div *ngIf="formErrors.password" style="background-color: red;">
+        {{formErrors.password}}
+      </div>
+    </div>
+  </div>
+  <div [ngClass]="{'has-error': formErrors.confirmPassword}">
+    <label>重覆密碼</label>
+    <div>
+      <input formControlName="confirmPassword" validateEqual="password" type="password" placeholder="輸入相同密碼">
+      <div *ngIf="formErrors.confirmPassword" style="background-color: red;">
+        {{formErrors.confirmPassword}}
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="formErrors.formError" style="background-color: red;">
+    {{formErrors.formError}}
+  </div>
+
+
+  <button [disabled]="formModel.invalid" type="submit">註冊</button>
+</form>
