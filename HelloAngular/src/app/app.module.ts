@@ -8,6 +8,8 @@ import { FormQuickStartComponent } from './form-quick-start/form-quick-start.com
 import { ChineseMobileValidator } from './form-quick-start/directives/chinese-mobile-validator.directive';
 import { UserRegisterComponent } from './user-register/user-register.component';
 import { EqualValidator } from './user-register/equal-validator.directive';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { FormControlComponent } from './user-profile/dynamic-form/form-control.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { EqualValidator } from './user-register/equal-validator.directive';
     ChineseMobileValidator,
     UserRegisterComponent,
     EqualValidator,
+    UserProfileComponent,
+    FormControlComponent,
   ],
   imports: [
     BrowserModule,
