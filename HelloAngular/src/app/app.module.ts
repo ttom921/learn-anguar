@@ -10,6 +10,8 @@ import { UserRegisterComponent } from './user-register/user-register.component';
 import { EqualValidator } from './user-register/equal-validator.directive';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { FormControlComponent } from './user-profile/dynamic-form/form-control.component';
+import { UserListComponent } from './user-list/user-list.component';
+import { UserListService } from './service/user-list.service';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { FormControlComponent } from './user-profile/dynamic-form/form-control.c
     EqualValidator,
     UserProfileComponent,
     FormControlComponent,
+    UserListComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,7 @@ import { FormControlComponent } from './user-profile/dynamic-form/form-control.c
     ReactiveFormsModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [UserListService],
   bootstrap: [AppComponent],
   entryComponents: [],
   exports: [EqualValidator]
