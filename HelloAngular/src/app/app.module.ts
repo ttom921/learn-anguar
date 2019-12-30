@@ -11,6 +11,7 @@ import { EqualValidator } from './user-register/equal-validator.directive';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { FormControlComponent } from './user-profile/dynamic-form/form-control.component';
 import { UserListComponent } from './user-list/user-list.component';
+import { OrderListComponent } from './order-list/order-list.component';
 import { UserListService } from './service/user-list.service';
 
 @NgModule({
@@ -23,6 +24,7 @@ import { UserListService } from './service/user-list.service';
     UserProfileComponent,
     FormControlComponent,
     UserListComponent,
+    OrderListComponent,
   ],
   imports: [
     BrowserModule,

@@ -15,5 +15,16 @@ export class UserListComponent implements OnInit {
   ngOnInit() {
     this.userList = this.userListService.getUserList();
   }
+  setList() {
+    let data: Array<any> = [
+      { userName: '大漠穷秋', age: 18 },
+      { userName: '大漠穷秋', age: 18 },
+      { userName: '大漠穷秋', age: 18 },
+      { userName: '大漠穷秋', age: 18 },
+      { userName: '大漠穷秋', age: 18 },
+    ];
+    this.userList = data;
+    this.userListService.setUserList(data);
+  }
 
 }
