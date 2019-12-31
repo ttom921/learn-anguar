@@ -13,6 +13,7 @@ import { FormControlComponent } from './user-profile/dynamic-form/form-control.c
 import { UserListComponent } from './user-list/user-list.component';
 import { OrderListComponent } from './order-list/order-list.component';
 import { UserListService } from './service/user-list.service';
+import { LearnRxjsComponent } from './learn-rxjs/learn-rxjs.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { UserListService } from './service/user-list.service';
     FormControlComponent,
     UserListComponent,
     OrderListComponent,
+    LearnRxjsComponent,
   ],
   imports: [
     BrowserModule,
