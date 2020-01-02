@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,7 @@ import { UserListComponent } from './user-list/user-list.component';
 import { OrderListComponent } from './order-list/order-list.component';
 import { UserListService } from './service/user-list.service';
 import { LearnRxjsComponent } from './learn-rxjs/learn-rxjs.component';
+import { LearnRxjsHttpComponent } from './learn-rxjs-http/learn-rxjs-http.component';
 
 @NgModule({
   declarations: [
@@ -27,9 +29,11 @@ import { LearnRxjsComponent } from './learn-rxjs/learn-rxjs.component';
     UserListComponent,
     OrderListComponent,
     LearnRxjsComponent,
+    LearnRxjsHttpComponent,
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,

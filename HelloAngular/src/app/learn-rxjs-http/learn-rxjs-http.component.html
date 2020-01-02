@@ -1,0 +1,12 @@
+<div *ngIf="post">
+  <!-- {{post | json}} -->
+  <p>id:{{post.id}} == UserId:{{post.userId}}</p>
+  <p> {{post.title}}</p>
+  <p>{{post.body}}</p>
+</div>
+<br />
+<div *ngFor="let item of posts">
+  <p>id:{{item.id}} == UserId:{{item.userId}}</p>
+  <p> {{item.title}}</p>
+  <p>{{item.body}}</p>
+</div>
