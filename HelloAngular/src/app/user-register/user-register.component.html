@@ -1,4 +1,9 @@
 <p>user-register works!</p>
+<div>
+  <div>{{ 'error.require' | translate: {'itemName': '郵件' } }}</div>
+  <div>{{ 'error.require' | translate: {'itemName': 'enum.gender' | translate } }}</div>
+</div>
+<hr />
 <form [formGroup]="formModel" (ngSubmit)="onSubmit($event)">
 
 
@@ -8,6 +13,7 @@
       <input formControlName="email" type="email" placeholder="輸入電子郵件">
       <div *ngIf="formErrors.email" style="background-color: red;">
         {{formErrors.email}}
+
       </div>
     </div>
   </div>

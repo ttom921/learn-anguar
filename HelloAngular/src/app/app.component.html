@@ -1,1 +1,7 @@
-<learn-rxjs-http></learn-rxjs-http>
+<div>
+  <button (click)="useLanguage('zh-tw')">{{'menu.languageList.taiwanese' | translate }}</button>
+  <button (click)="useLanguage('en')">{{'menu.languageList.english' | translate }}</button>
+</div>
+
+<p [translate]="'menu.language'"> </p> <span>{{currentLanguage}}</span>
+<user-register></user-register>

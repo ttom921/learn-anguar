@@ -1,0 +1,20 @@
+{
+  "menu": {
+    "home": "HOME",
+    "feature": {
+      "name": "Feature module",
+      "form": "Form"
+    },
+    "language": "language",
+    "languageList": {
+      "taiwanese": "繁體中文",
+      "english": "English"
+    }
+  },
+  "error": {
+    "require": "{{itemName}}is required."
+  },
+  "enum": {
+    "gender": "man"
+  }
+}
