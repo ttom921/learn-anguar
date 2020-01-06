@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+import { TranslateService } from '@ngx-translate/core';
 
 
 @Component({
@@ -35,8 +36,20 @@ export class UserRegisterComponent implements OnInit {
   }
 
   //#endregion form相關
-  constructor(private fb: FormBuilder) { }
+  constructor(
+    private fb: FormBuilder,
+    private translate: TranslateService
+  ) {
+    this.translatevalidationMessagesproc();
 
+  }
+  translatevalidationMessagesproc() {
+    this.translate.get('validationMessages').subscribe(value => {
+      //console.log(value);
+      this.validationMessages.email = value.email;
+      //this.validationMessages.email.pattern = value.email.pattern;
+    });
+  }
   ngOnInit() {
     this.BuildForm();
   }

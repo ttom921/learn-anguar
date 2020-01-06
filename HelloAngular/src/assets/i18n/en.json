@@ -16,5 +16,11 @@
   },
   "enum": {
     "gender": "man"
+  },
+  "validationMessages": {
+    "email": {
+      "required": "email is required.",
+      "pattern": "please input correct email"
+    }
   }
 }

@@ -15,7 +15,7 @@ export class AppComponent {
     return this.languageService.translate.currentLang;
   }
   useLanguage(language) {
-    this.languageService.setLang(language);
+    this.languageService.selectLanguage(language);
   }
 
   fatherDoSomething(ev) {

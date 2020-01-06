@@ -16,5 +16,11 @@
   },
   "enum": {
     "gender": "男"
+  },
+  "validationMessages": {
+    "email": {
+      "required": "郵箱必須輸入",
+      "pattern": "請輸入正確的郵箱地址"
+    }
   }
 }
