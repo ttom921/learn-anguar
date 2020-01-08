@@ -11,5 +11,7 @@ export class UnitTestComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  helloWorld() {
+    return "Hello World";
+  }
 }

@@ -33,4 +33,8 @@ describe('UnitTestComponent', () => {
     const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual('untestapp');
   }));
+  it('show hello world', () => {
+    expect(component.helloWorld()).toEqual("Hello World");
+  });
+
 });
