@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { LanguageService } from './service/language.service';
 
 @Component({
   selector: 'app-root',
@@ -8,17 +7,8 @@ import { LanguageService } from './service/language.service';
 })
 export class AppComponent {
   title = 'HelloAngular';
-  constructor(private languageService: LanguageService) {
-    this.languageService.setInitState();
-  }
-  get currentLanguage() {
-    return this.languageService.translate.currentLang;
-  }
-  useLanguage(language) {
-    this.languageService.selectLanguage(language);
+  constructor() {
+
   }
 
-  fatherDoSomething(ev) {
-    console.log(ev);
-  }
 }
