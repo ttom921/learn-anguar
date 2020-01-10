@@ -3,11 +3,11 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { UnitTestComponent } from './unit-test/unit-test.component';
 import { LanguageService } from './service/language.service';
-import { TranslateService, TranslateStore, TranslateLoader, TranslateCompiler, TranslateModule } from '@ngx-translate/core';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpLoaderFactory } from './app.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
-xdescribe('AppComponent', () => {
+describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
