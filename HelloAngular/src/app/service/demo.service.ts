@@ -10,4 +10,7 @@ export class DemoService {
   getValue() { return this.value; }
   getObservableValue() { return of('observable Clover'); }
   getPromiseValue() { return Promise.resolve("promise value"); }
+  isAuthenticated(): boolean {
+    return !!localStorage.getItem('token');
+  }
 }

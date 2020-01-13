@@ -31,6 +31,20 @@ describe('DemoService', () => {
       expect(value).toBe("observable Clover");
     });
   });
-
-
 });
+//for isAuthenticated test
+describe('isAuthenticated testing', () => {
+  let service: DemoService;
+  beforeEach(() => {
+    service = new DemoService();
+  });
+  afterEach(() => {
+    service = null;
+    localStorage.removeItem('token');
+  });
+  it('should return true from isAuthenticated when there is a token', () => {
+    localStorage.setItem('token', '1234');
+    expect(service.isAuthenticated()).toBeTruthy();
+  });
+});
+
