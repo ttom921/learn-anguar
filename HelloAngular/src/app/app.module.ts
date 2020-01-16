@@ -20,6 +20,7 @@ import { LearnRxjsComponent } from './learn-rxjs/learn-rxjs.component';
 import { LearnRxjsHttpComponent } from './learn-rxjs-http/learn-rxjs-http.component';
 import { UnitTestComponent } from './unit-test/unit-test.component';
 import { LoginComponent } from './login/login.component';
+import { MyPipe } from './common/my.pipe';
 //AoT requires an exported function for factories
 //建立TransalteHttpLoader作為語系檔的讀取器
 export function HttpLoaderFactory(http: HttpClient) {
@@ -40,6 +41,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     LearnRxjsHttpComponent,
     UnitTestComponent,
     LoginComponent,
+    MyPipe,
   ],
   imports: [
     BrowserModule,

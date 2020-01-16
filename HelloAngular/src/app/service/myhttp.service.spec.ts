@@ -20,7 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 //     });
 //   });
 // });
-describe('MyhttpService by SpyOn', () => {
+xdescribe('MyhttpService by SpyOn', () => {
   let myhttpServ: MyhttpService;
   beforeEach(() => {
     TestBed.configureTestingModule({
