@@ -1,4 +1,6 @@
+<h1>{{title}}</h1>
 <h4>登入帳號</h4>
+
 <form [formGroup]="formModel" (ngSubmit)="onSubmit($event)">
   <div>
     <input formControlName="email" type="email" placeholder="電子郵件(用於帳號登入)">

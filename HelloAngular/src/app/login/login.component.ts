@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { DemoService } from '../service/demo.service';
 
 @Component({
   selector: 'app-login',
@@ -7,10 +8,12 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+  title = '標題';
   formModel: FormGroup;
   userInfo: any = {};
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private demo: DemoService
   ) { }
 
   ngOnInit() {
@@ -38,7 +41,12 @@ export class LoginComponent implements OnInit {
   onSubmit(e) {
     if (this.formModel.valid) {
       this.userInfo = this.formModel.value;
+      if (this.demo.isAuthenticated()) {
+        alert('login success');
+      } else {
+        alert('login failed');
+      }
     }
-    console.log(this.userInfo);
+    //console.log(this.userInfo);
   }
 }
