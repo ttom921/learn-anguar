@@ -5,6 +5,7 @@ import { LoginComponent } from './login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 // our isAuthenticated service.
 import { DemoService } from '../service/demo.service';
+import { DebugElement } from '@angular/core';
 
 describe('LoginComponent', () => {
   let component: LoginComponent;
@@ -147,5 +148,54 @@ describe('Mocking with real service with Spy', () => {
     spyOn(service, 'isAuthenticated').and.returnValue(false);
     expect(service.isAuthenticated()).toBeFalsy();
   });
+});
+//---detect change
+describe('LoginComponent login', () => {
+  let component: LoginComponent;
+  let fixture: ComponentFixture<LoginComponent>;
+  let service: DemoService;
+  let el: DebugElement;//要使用它來query DOM
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [LoginComponent],
+      imports: [ReactiveFormsModule],
+      providers: [DemoService],
 
+    })
+    fixture = TestBed.createComponent(LoginComponent);
+    component = fixture.componentInstance;
+    service = TestBed.get(DemoService);
+    el = fixture.debugElement;// debugElement
+    fixture.detectChanges();
+  });
+  it('Should get login button and without logout button befor authenticatrd user', () => {
+    const loginBTN = el.nativeElement.querySelector('button[type="submit"]');
+    const logoutBTN = el.nativeElement.querySelector('#logoutBtn');
+    //有login按鈕
+    expect(loginBTN).toBeTruthy();
+
+    //登入挾鈕文字為"登入"
+    expect(loginBTN.textContent.trim()).toBe('登入');
+
+    //沒有登出按鈕
+    expect(logoutBTN).toBeNull();
+  });
+  it('should show user email, logout button and without login button after auteenticated.', () => {
+    const testEmail = 'clover@example.com';
+    const testPass = 'abcd1234';
+    spyOn(service, 'isAuthenticated').and.returnValue(true);
+    component.formModel.patchValue({ email: testEmail, password: testPass });
+    component.onSubmit();
+    fixture.detectChanges();//重要
+
+    const userEmail = el.nativeElement.querySelector('#userEmial');
+    const loginBTN = el.nativeElement.querySelector('button[type="submit"]');
+    const logoutBTN = el.nativeElement.querySelector('#logoutBtn');
+    //顯示使用者的email
+    expect(userEmail.textContent.trim()).toBe(testEmail);
+    //有登出按鈕
+    expect(logoutBTN).toBeTruthy();
+    //沒有登入按鈕
+    expect(loginBTN).toBeNull();
+  });
 });

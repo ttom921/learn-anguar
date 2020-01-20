@@ -8,8 +8,8 @@ import { DemoService } from '../service/demo.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  title = '標題';
   formModel: FormGroup;
+  isAuthenticated = false;//切換 登入前？登入後 頁面使用
   userInfo: any = {};
   constructor(
     private fb: FormBuilder,
@@ -38,15 +38,22 @@ export class LoginComponent implements OnInit {
       ]
     });
   }
-  onSubmit(e) {
+  onSubmit() {
     if (this.formModel.valid) {
+      localStorage.setItem('token', JSON.stringify({
+        email: this.formModel.value.email
+      }));
       this.userInfo = this.formModel.value;
       if (this.demo.isAuthenticated()) {
-        alert('login success');
+        this.isAuthenticated = true;
       } else {
-        alert('login failed');
+        this.isAuthenticated = false;
       }
     }
     //console.log(this.userInfo);
+  }
+  logout() {
+    localStorage.removeItem('token');
+    this.isAuthenticated = false;
   }
 }
