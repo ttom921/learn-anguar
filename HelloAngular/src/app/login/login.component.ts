@@ -39,17 +39,27 @@ export class LoginComponent implements OnInit {
     });
   }
   onSubmit() {
-    if (this.formModel.valid) {
-      localStorage.setItem('token', JSON.stringify({
-        email: this.formModel.value.email
-      }));
-      this.userInfo = this.formModel.value;
-      if (this.demo.isAuthenticated()) {
-        this.isAuthenticated = true;
-      } else {
-        this.isAuthenticated = false;
+    localStorage.setItem('token', JSON.stringify({
+      email: this.formModel.value.email
+    }));
+    this.userInfo = this.formModel.value;
+    // //sync authenticated
+    // if (this.demo.isAuthenticated()) {
+    //   this.isAuthenticated = true;
+    // } else {
+    //   this.isAuthenticated = false;
+    // }
+
+    //rxjs style
+    this.demo.asyncAuthecticated().subscribe(
+      res => {
+        if (res) {
+          this.isAuthenticated = true;
+        } else {
+          this.isAuthenticated = false;
+        }
       }
-    }
+    );
     //console.log(this.userInfo);
   }
   logout() {
