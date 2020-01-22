@@ -8,6 +8,8 @@ import { DemoService } from '../service/demo.service';
 import { DebugElement } from '@angular/core';
 import { of } from 'rxjs';
 import { delay } from 'rxjs/operators';
+import { HoverFocusDirective } from '../_directive/hover-focus.directive';
+import { By } from '@angular/platform-browser';
 
 xdescribe('LoginComponent', () => {
   let component: LoginComponent;
@@ -203,7 +205,7 @@ xdescribe('LoginComponent login', () => {
   });
 });
 //async test secton
-describe('Async testing authenticated', () => {
+xdescribe('Async testing authenticated', () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
   let service: DemoService;
@@ -292,4 +294,34 @@ describe('Async testing authenticated', () => {
         expect(loginBTN).toBeNull();
       });
     });
+});
+describe('Test directive in LoginComponent', () => {
+  let component: LoginComponent;
+  let fixture: ComponentFixture<LoginComponent>;
+  let service: DemoService;
+  let el: DebugElement;
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [
+        LoginComponent, HoverFocusDirective],
+      imports: [ReactiveFormsModule],
+      providers: [DemoService]
+    });
+
+    fixture = TestBed.createComponent(LoginComponent);
+    component = fixture.componentInstance;
+    service = TestBed.get(DemoService);
+    el = fixture.debugElement;
+    fixture.detectChanges();
+  });
+  it('test hover focus directive on LoginComponent', () => {
+    let titleEl = el.query(By.css('h4'));
+    titleEl.triggerEventHandler('mouseenter', null);
+    fixture.detectChanges();
+    expect(titleEl.nativeElement.style.backgroundColor).toBe('yellow');
+
+    titleEl.triggerEventHandler('mouseleave', null);
+    fixture.detectChanges();
+    expect(titleEl.nativeElement.style.backgroundColor).toBe('');
+  });
 });
