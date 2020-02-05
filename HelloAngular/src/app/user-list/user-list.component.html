@@ -1,13 +1,10 @@
 <div>
-  <div>userlist-Service非單例</div>
+  <div>Serviec 實例--{{userListService.id}}</div>
   <div>
     <ul>
       <li *ngFor="let user of userList;let i=index;">
-        {{i+1}}-{{user.userName}}-{{user.age}}
+        {{i+1}}--{{user.userName}}-{{user.age}}
       </li>
     </ul>
-  </div>
-  <div>
-    <button (click)="setList()">塞數據</button>
   </div>
 </div>

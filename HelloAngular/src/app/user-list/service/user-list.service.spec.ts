@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { DemodependService } from './demodepend.service';
+import { UserListService } from './user-list.service';
 
-xdescribe('DemodependService', () => {
+describe('UserListService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: DemodependService = TestBed.get(DemodependService);
+    const service: UserListService = TestBed.get(UserListService);
     expect(service).toBeTruthy();
   });
 });
