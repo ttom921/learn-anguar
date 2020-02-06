@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 import { UUID } from 'angular2-uuid';
-
+import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
@@ -9,7 +9,7 @@ export class UserListService {
   get id(): string {
     return this._id;
   }
-  constructor() {
+  constructor(@Inject(HttpClient) private http) {
     this._id = UUID.UUID();
   }
   getUserlist(): Array<any> {

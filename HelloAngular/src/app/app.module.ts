@@ -1,13 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserListComponent } from './user-list/user-list.component';
+import { MY_CONFIG_TOKEN, MY_CONFIG } from './my-config';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,10 +17,9 @@ import { UserListComponent } from './user-list/user-list.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [{ provide: MY_CONFIG_TOKEN, useValue: MY_CONFIG }],
   bootstrap: [AppComponent],
   entryComponents: [],
   exports: []
