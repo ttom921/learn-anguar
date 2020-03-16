@@ -7,10 +7,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { MY_CONFIG_TOKEN, MY_CONFIG } from './my-config';
+import { ChildComponent } from './child/child.component';
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
+    ChildComponent,
   ],
   imports: [
     BrowserModule,
