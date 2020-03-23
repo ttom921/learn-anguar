@@ -2,6 +2,6 @@
   <div>父元件</div>
   <p>Serviec 實例--{{ userListService!=null ? userListService.id:''}}</p>
   <div>
-    <app-child></app-child>
+    <ng-content select="app-child"></ng-content>
   </div>
 </div>
